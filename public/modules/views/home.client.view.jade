@@ -1,0 +1,51 @@
+div(class="container")
+  div(class="row")
+    div(class="col-md-11")
+      div(class="row")
+        div(class="col-sm-10")
+          h2(class="italic") {{product.handle}}
+        div(class="col-sm-2")
+          input(ng-disabled="isEdit()" ng-click="update()" type="button" class="btn btn-primary btn-margin" value="update")
+          input(type="button" class="btn btn-primary" value="create")
+
+      div(class="scrollable")
+        table(class="table table-striped")
+          thead
+            tr
+              th barcode
+              th price
+              th Id
+              th shipping
+              th service
+              th sku
+              th taxable
+              th title
+              th weight
+          tbody
+            tr(ng-click="edit(variant)" ng-repeat="variant in product.variants")
+              td 
+                p(ng-hide="variant.edit") {{variant.barcode}}
+                input(ng-show="variant.edit" type="text" ng-model="variant.barcode")
+              td 
+                p(ng-hide="variant.edit") {{variant.price}}
+                input(ng-show="variant.edit" type="text" ng-model="variant.price")
+              td {{variant.product_id}}
+              td 
+                p(ng-hide="variant.edit") {{variant.requires_shipping}}
+                input(ng-show="variant.edit" type="text" ng-model="variant.requires_shipping")
+              td 
+                p {{variant.fulfillment_service}}
+              td 
+                p(ng-hide="variant.edit") {{variant.sku}}
+                input(ng-show="variant.edit" type="text" ng-model="variant.sku")
+              td {{variant.taxable}}
+              td {{variant.title}}
+              td
+                p(ng-hide="variant.edit") {{variant.weight}}
+                input(ng-show="variant.edit" type="text" ng-model="variant.weight")
+
+
+  div(class="row")
+    ul(class="list-inline height-20")
+      li
+        img(ng-repeat="image in product.images" class="img-thumnail" src="{{image.src}}")
