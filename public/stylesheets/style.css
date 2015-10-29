@@ -24,8 +24,8 @@ nav a{
     height: 100vh;
 }
 
-.col-md-3, col-md-9{
-    height: 95%;
+.col-md-3{
+    height: 90%;
 }
 
 .col-md-3{
@@ -39,7 +39,7 @@ nav a{
 a.box{
     display:block;
     text-decoration: none;
-    box-shadow: 7px 5px 5px black;
+    box-shadow: 7px 5px 5px gray;
     border-radius: 5px;
 }
 
@@ -127,6 +127,13 @@ form:after{
     left:0;
     display:block;
     width:25%;
+    padding:0;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+}
+.row-fixed-bottom p{
+    margin:0;
+    padding:0;
 }
 
 .row-fixed-bottom input[type="text"]{
@@ -137,3 +144,7 @@ form:after{
     border-right: 1px solid black;
     font-family: "Helvetica nue, Sans serif";
 }
+
+.input-padded{
+}
+

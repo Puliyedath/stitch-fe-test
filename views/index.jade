@@ -14,13 +14,19 @@ block content
     div(class="row vpFit" data-ng-Controller="productsCtrl")
 
       div(class="col-md-3")
-        a(class="box" ng-click="select(product)" ng-repeat="product in products | filter:{title:searchText} ")
+        a(class="box" ng-click="select(product)" ng-repeat="product in products | filter:{title:searchText} | filter: dateFilter('created_at', sDate, eDate)")
           div(class="panel panel-padding panel-default")
             div(class="panel-heading") {{product.handle}}
             div(class="panel-body") {{product.body_html}}
             
         div(class="row-fixed-bottom")
-            input(type="text" placeholder="search" ng-model="searchText")
+          p
+            div(class="input-daterange input-group padded" id="datepicker")
+              input(type="date" ng-model="sDate" placeholder="mm/dd/yyyy" class="input-sm form-control" name="start")
+              span(class="input-group-addon") to
+              input(type="date" ng-model="eDate" placeholder="mm/dd/yyyy" class="input-sm form-control" name="end")
+
+            input(type="text" placeholder="search for title" ng-model="searchText") 
 
 
       div(class="col-md-9")

@@ -72,6 +72,25 @@
 		return ($scope.product && $scope.product.images.length > 0);
 	    };
 
+	    $scope.dateFilter =  function(property, startDate, endDate){
+		
+		return function(item){
+
+		    if(!startDate || !endDate){
+			return true;
+		    }
+
+		    if(item[property] === null)return false;
+
+		    var iDate = moment(item[property]);
+		    var sDate = moment(startDate, "MM-DD-YYYY");
+		    var eDate = moment(endDate, "MM-DD-YYYY");
+
+		    if (iDate >= sDate && iDate <= eDate) return true ;
+		    return false;
+		};
+	    };
+
 	    $scope.delete=function(product){
 		console.log(product);
 		productService.save({
