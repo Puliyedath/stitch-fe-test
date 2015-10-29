@@ -1,4 +1,3 @@
-
 <div class="container">
   <div class="row" ng-show="product">
     <div class="col-md-11">
@@ -12,7 +11,7 @@
 	  <button ng-click="delete(product)" class="btn btn-primary">Delete</button>
         </div>
       </div>
-      <div class="scrollable">
+      <div class="scrollable height-border">
         <table class="table table-striped">
           <thead>
             <tr>
@@ -61,8 +60,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    
+  <div class="row row-padded">
     <ul ng-show="hasImages()" class="list-inline height-20">
       <li><img ng-repeat="image in product.images" src="{{image.src}}" class="img-thumnail"/></li>
     </ul>

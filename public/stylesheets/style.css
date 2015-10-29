@@ -7,6 +7,7 @@
 body{
     height: 100%;
     background: #F0F1F2;
+    overflow:hidden;
 }
 
 nav{
@@ -24,7 +25,11 @@ nav a{
 }
 
 .col-md-3, col-md-9{
-    height: 100%;
+    height: 95%;
+}
+
+.col-md-3{
+    overflow: auto;
 }
 
 .col-md-3{
@@ -76,6 +81,14 @@ img{
     margin-right: 0.3em;
 }
 
+.scrollable{
+    overflow: auto;
+}
+
+.height-border{
+    height: 300px;
+    border-top: 1px solid black;
+}
 
 .italic{
     font-style:italic;
@@ -90,6 +103,10 @@ img{
     padding: 1em;
 }
 
+.row-padded{
+    padding: 1em 0;
+}
+
 .float-right{
     float: right;
 }
@@ -102,4 +119,21 @@ form:after{
     content:'';
     display:block;
     clear:both;
+}
+
+.row-fixed-bottom{
+    position:fixed;
+    bottom:0;
+    left:0;
+    display:block;
+    width:25%;
+}
+
+.row-fixed-bottom input[type="text"]{
+    width: 100%;
+    padding: 0.5em 0;
+    font-size: 1.1em;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    font-family: "Helvetica nue, Sans serif";
 }
