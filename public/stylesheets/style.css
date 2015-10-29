@@ -1,0 +1,105 @@
+/* this overides the specific settings from the bootsrap stylesheet */
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    background: #F0F1F2;
+}
+
+nav{
+    font-size: 1.5em;
+    height: 7vh;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+.vpFit{
+    padding-top:8vh;
+    height: 100vh;
+}
+
+.col-md-3, col-md-9{
+    height: 100%;
+}
+
+.col-md-3{
+    border-right: 1px solid black;
+}
+
+a.box{
+    display:block;
+    text-decoration: none;
+    box-shadow: 7px 5px 5px black;
+    border-radius: 5px;
+}
+
+a.box:hover{
+    font-size: 1.1em;
+}
+
+.scrollable{
+    height: 30%;
+    overflow: auto;
+}
+
+.panel-padding{
+    height: 15%;
+    padding: 0.2em;
+    background: #fff;
+}
+
+.height-20{
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 1em;
+}
+
+ul.height-20:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+
+img{
+    width: 10em;
+    height: 10em;
+    border-radius: 10px;
+    border: 1px dotted black;
+}
+
+.btn-margin{
+    margin-right: 0.3em;
+}
+
+
+.italic{
+    font-style:italic;
+}
+
+.form-bordered{
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+.form-padded{
+    padding: 1em;
+}
+
+.float-right{
+    float: right;
+}
+
+.float-left{
+    float:left;
+}
+
+form:after{
+    content:'';
+    display:block;
+    clear:both;
+}

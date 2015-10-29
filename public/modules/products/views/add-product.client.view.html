@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-2 col-md-8">
+			<form role="form" class="form-bordered form-padded" no-validate ng-submit="submit(newProduct)">
+				<div class="form-group">
+					<label for="title">Title:</label>
+					<input type="text" class="form-control" id="title" placeholder="Enter title" ng-model="newProduct.title" ng-required>
+				</div>
+				<div class="form-group">
+					<label for="label">Description Label</label>
+					<input type="text" class="form-control" id="label" ng-model="newProduct.body_html" placeholder="Enter label" ng-required>
+				</div>
+				<div class="form-group">
+					<label for="vendor">Vendor</label>
+					<input type="text" class="form-control" id="vendor" ng-model="newProduct.vendor" placeholder="Enter vendor" ng-required>
+				</div>
+				<div class="form-group">
+					<label for="type">ProductType</label>
+					<input type="text" class="form-control" id="type" ng-model="newProduct.product_type" placeholder="Enter type" ng-required>
+				</div>
+				<div class="form-group">
+					<label for="tags">tags</label>
+					<input type="text" class="form-control" ng-model="newProduct.tags" id="tags" placeholder="tag1, tag2, tag3">
+				</div>
+				<button type="submit" class="btn btn-primary float-left">AddProduct</button><a href="/#!/" class="btn btn-success float-right">Cancel</a>
+				
+			</form>
+		</div>
+	</div>
+</div>
