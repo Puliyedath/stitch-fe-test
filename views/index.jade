@@ -1,5 +1,24 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(class="container-fluid")
+    nav(class="navbar navbar-inverse navbar-fixed-top")
+      div(class="container-fluid")
+        div(class="navbar-header")
+          a(
+            href="#"
+            class="navbar-brand"
+          )=title
+        
+  
+    div(class="row vpFit" data-ng-Controller="productsCtrl")
+
+      div(class="col-md-3")
+        a(class="box" ng-click="select(product)" ng-repeat="product in products")
+          div(class="panel panel-padding panel-default")
+            div(class="panel-heading") {{product.handle}}
+            div(class="panel-body") {{product.body_html}}
+          
+
+      div(class="col-md-9")
+        section(data-ui-view)

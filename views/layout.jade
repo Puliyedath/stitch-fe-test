@@ -1,7 +1,23 @@
 doctype html
 html
   head
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    )
     title= title
+    link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/components/angular/angular.min.js")
+    script(src="/components/angular-resource/angular-resource.min.js")
+    script(src="/components/angular-ui-router/release/angular-ui-router.min.js")
+    script(src="/modules/config.js")
+    script(src="/modules/application.js")
+    script(src="/modules/config.client.routes.js")
+    script(src="/modules/products/products.client.application.js")
+    script(src="/modules/products/config/products.client.config.routes.js")
+    script(src="/modules/products/services/products.client.service.js")
+    script(src="/modules/products/controllers/products.client.controller.js")
+
   body
     block content
