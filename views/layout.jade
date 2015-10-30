@@ -8,6 +8,9 @@ html
     title= title
     link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.min.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css")
+    script(src="//code.jquery.com/jquery-1.10.2.js")
+    script(src="//code.jquery.com/ui/1.11.4/jquery-ui.js")
     script(src="/components/moment/min/moment.min.js")
     script(src="/components/angular/angular.min.js")
     script(src="/components/angular-resource/angular-resource.min.js")
@@ -19,6 +22,12 @@ html
     script(src="/modules/products/config/products.client.config.routes.js")
     script(src="/modules/products/services/products.client.service.js")
     script(src="/modules/products/controllers/products.client.controller.js")
+    script.
+      $(function() {
+        $( "#datepicker1" ).datepicker();
+        $( "#datepicker2" ).datepicker();
+      });
+
 
   body
     block content
