@@ -76,17 +76,20 @@
 		
 		return function(item){
 
+
 		    if(!startDate || !endDate){
 			return true;
 		    }
 
 		    if(item[property] === null)return false;
 
-		    var iDate = moment(item[property]);
-		    var sDate = moment(startDate, "MM-DD-YYYY");
-		    var eDate = moment(endDate, "MM-DD-YYYY");
 
-		    if (iDate >= sDate && iDate <= eDate) return true ;
+		    var iDate = moment(item[property], "MM-DD-YYYY");
+		    var sDate = moment(new Date(startDate).toJSON(), "MM-DD-YYYY");
+		    var eDate = moment(new Date(endDate).toJSON(), "MM-DD-YYYY");
+
+
+		    if (iDate >= sDate && (iDate <= eDate)) return true ;
 		    return false;
 		};
 	    };
@@ -109,6 +112,7 @@
 		    $state.go('home');
 		}, function(error){
 		    console.log('error is' + error);
+		    console.log(error);
 		});
 	    };
 
