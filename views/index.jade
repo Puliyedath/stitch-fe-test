@@ -14,7 +14,7 @@ block content
     div(class="row vpFit" data-ng-Controller="productsCtrl")
 
       div(class="col-md-3")
-        a(class="box" ng-click="select(product)" ng-repeat="product in products | filter:{title:searchText} | filter: dateFilter('created_at', sDate, eDate)")
+        a(class="box" ng-click="select(product)" ng-repeat="product in products | filter:{title:searchText} | dateFilter: 'created_at':sDate:eDate")
           div(class="panel panel-padding panel-default")
             div(class="panel-heading") {{product.handle}}
             div(class="panel-body") {{product.body_html}}

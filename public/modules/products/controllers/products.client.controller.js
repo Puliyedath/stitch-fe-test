@@ -55,6 +55,7 @@
 
 	    $scope.submit=function(product){
 		var data = {"product": product};
+
 		productService.save({
 		    method:'post',
 		    path:"/admin/products.json",
@@ -72,30 +73,9 @@
 		return ($scope.product && $scope.product.images.length > 0);
 	    };
 
-	    $scope.dateFilter =  function(property, startDate, endDate){
-		
-		return function(item){
-
-
-		    if(!startDate || !endDate){
-			return true;
-		    }
-
-		    if(item[property] === null)return false;
-
-
-		    var iDate = moment(item[property], "MM-DD-YYYY");
-		    var sDate = moment(new Date(startDate).toJSON(), "MM-DD-YYYY");
-		    var eDate = moment(new Date(endDate).toJSON(), "MM-DD-YYYY");
-
-
-		    if (iDate >= sDate && (iDate <= eDate)) return true ;
-		    return false;
-		};
-	    };
-
 	    $scope.delete=function(product){
 		console.log(product);
+
 		productService.save({
 		    method:'post',
 		    path:"/admin/products/" + product.id + ".json",
