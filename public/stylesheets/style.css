@@ -65,11 +65,16 @@ ul.height-20:after{
     clear:both;
 }
 
+ul.list-inline{
+    white-space: nowrap ;
+}
+
 img{
     width: 10em;
     height: 10em;
     border-radius: 10px;
     border: 1px dotted black;
+    margin: 0 1em;
 }
 
 .btn-margin{
@@ -144,6 +149,10 @@ form:after{
 .padded-div{
     padding-left: 30%;
     width :100%;
+}
+
+ul.list-inline{
+    overflow-x:auto;
 }
 
 
