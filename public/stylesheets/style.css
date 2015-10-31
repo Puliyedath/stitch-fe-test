@@ -152,5 +152,25 @@ form:after{
     .vanish {
 	display:none !important;
     }
+
+
+    .icon:before{
+	font-size: 30px;
+	color: white;
+	content: "\f09b";
+	font-family: FontAwesome;
+	padding: 0 0.3em 0 0;
+    }
+
+    .padded-div{
+	padding-left:0;
+	padding: 4em;
+    }
+
+    .padded-div.move{
+	-webkit-transform: translateX(30%); 
+	transform: translateX(30%) !important;
+    }
+    
 }
 
