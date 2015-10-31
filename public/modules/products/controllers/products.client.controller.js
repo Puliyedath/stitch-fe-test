@@ -2,6 +2,11 @@
     angular.module('Products')
 	.controller('productsCtrl', ['$scope','productService', '$state', function($scope, productService, $state){
 
+	    (function(){
+		angular.element("#fromDate" ).datepicker();
+		angular.element("#toDate" ).datepicker();
+	    }());
+
 	    productService.changedVariants = [];
 	    
 	    //getting the list of products

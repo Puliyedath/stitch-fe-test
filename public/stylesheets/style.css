@@ -24,16 +24,11 @@ nav a{
     height: 100vh;
 }
 
-.col-md-3{
-    height: 90%;
-}
-
-.col-md-3{
-    overflow: auto;
-}
-
-.col-md-3{
+.col-sm-3{
     border-right: 1px solid black;
+    overflow: auto;
+    height: 90%;
+    position:absolute;
 }
 
 a.box{
@@ -104,7 +99,7 @@ img{
 }
 
 .row-padded{
-    padding: 1em 0;
+    padding: 1em 4em 0 0;
 }
 
 .float-right{
@@ -128,7 +123,6 @@ form:after{
     display:block;
     width:25%;
     padding:0;
-    border-top: 1px solid black;
     border-right: 1px solid black;
 }
 .row-fixed-bottom p{
@@ -140,11 +134,23 @@ form:after{
     width: 100%;
     padding: 0.5em 0;
     font-size: 1.1em;
-    border-top: 1px solid black;
-    border-right: 1px solid black;
     font-family: "Helvetica nue, Sans serif";
 }
 
-.input-padded{
+.pos-absolute{
+    position: absolute;
+}
+
+.padded-div{
+    padding-left: 30%;
+    width :100%;
+}
+
+
+/*writing media query */
+@media screen and (max-width: 1000px) {
+    .vanish {
+	display:none !important;
+    }
 }
 

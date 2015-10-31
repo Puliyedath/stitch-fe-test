@@ -13,21 +13,21 @@ block content
   
     div(class="row vpFit" data-ng-Controller="productsCtrl")
 
-      div(class="col-md-3")
+      div(class="col-sm-3 pos-absolute vanish")
         a(class="box" ng-click="select(product)" ng-repeat="product in products | filter:{title:searchText} | dateFilter: 'created_at':sDate:eDate")
           div(class="panel panel-padding panel-default")
             div(class="panel-heading") {{product.handle}}
             div(class="panel-body") {{product.body_html}}
             
         div(class="row-fixed-bottom")
-          p
-            div(class="input-daterange input-group padded")
-              input(type="text" id="fromDate" ng-model="sDate" placeholder="mm/dd/yyyy" class="input-sm form-control" name="start")
-              span(class="input-group-addon") to
-              input(type="text" id="toDate" ng-model="eDate" placeholder="mm/dd/yyyy" class="input-sm form-control" name="end")
+          div(class="input-daterange input-group padded")
+            input(type="text" id="fromDate" ng-model="sDate" placeholder="mm/dd/yyyy" class="input-sm form-control" name="start")
+            span(class="input-group-addon") to
+            input(type="text" id="toDate" ng-model="eDate" placeholder="mm/dd/yyyy" class="input-sm form-control" name="end")
 
+          p
             input(type="text" placeholder="search for title" ng-model="searchText") 
 
 
-      div(class="col-md-9")
+      div(class="row")
         section(data-ui-view)
