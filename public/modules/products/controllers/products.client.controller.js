@@ -8,6 +8,7 @@
 		angular.element('.icon').click(function(){
 		    angular.element('div.pos-absolute').toggleClass('vanish');
 		    angular.element('.padded-div').toggleClass('move');
+		    angular.element('form').toggleClass('move');
 		});
 	    }());
 

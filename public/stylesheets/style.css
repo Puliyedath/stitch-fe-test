@@ -176,7 +176,12 @@ ul.list-inline{
 	padding: 4em;
     }
 
-    .padded-div.move{
+    .padded-div.move {
+	-webkit-transform: translateX(30%); 
+	transform: translateX(30%) !important;
+    }
+
+    form.move {
 	-webkit-transform: translateX(30%); 
 	transform: translateX(30%) !important;
     }
