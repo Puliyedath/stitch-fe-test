@@ -28,6 +28,14 @@ input.ng-invalid.ng-dirty{
     border-color:red;
 }
 
+.micro{
+    display:inline-block;
+    height: 40px;
+    width: 40px;
+    border: 2px solid white;
+    border-radius:100%;
+}
+
 input.ng-valid.ng-dirty{
     border-color:green;
     border-width:2px;

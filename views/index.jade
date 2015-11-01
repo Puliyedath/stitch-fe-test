@@ -18,7 +18,9 @@ block content
       div(class="col-sm-3 pos-absolute vanish")
         a(class="box" ng-click="select(product)" ng-repeat="product in products | filter:{title:searchText} | dateFilter: 'created_at':sDate:eDate")
           div(class="panel panel-padding panel-default")
-            div(class="panel-heading") {{product.handle}}
+            div(class="panel-heading")
+              h3(class="panel-title") {{product.handle}}
+                img(class="micro" src="{{product.image.src || '/images/maskpholder.png'}}")
             div(class="panel-body") {{product.body_html}}
             
         div(class="row-fixed-bottom")
