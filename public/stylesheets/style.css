@@ -30,8 +30,8 @@ input.ng-invalid.ng-dirty{
 
 .micro{
     display:inline-block;
-    height: 40px;
-    width: 40px;
+    height: 2em;
+    width: 2em;
     border: 2px solid white;
     border-radius:100%;
 }
@@ -52,6 +52,7 @@ input.ng-valid.ng-dirty{
     overflow: auto;
     height: 90%;
     position:absolute;
+    width: 40vh;
 }
 
 a.box{
@@ -120,6 +121,7 @@ img{
 .form-bordered{
     border: 3px solid black;
     border-radius: 5px;
+    margin: 1em;
 }
 
 .form-padded{
@@ -149,7 +151,7 @@ form:after{
     bottom:0;
     left:0;
     display:block;
-    width:25%;
+    width:40vh;
     padding:0;
     border-right: 1px solid black;
 }
@@ -177,13 +179,15 @@ ul.list-inline{
     overflow-x:auto;
 }
 
+a.box{
+    opacity:1.0;
+}
 
 /*writing media query */
 @media screen and (max-width: 1000px) {
     .vanish {
 	display:none !important;
     }
-
 
     .icon:before{
 	font-size: 30px;
@@ -199,14 +203,13 @@ ul.list-inline{
     }
 
     .padded-div.move {
-	-webkit-transform: translateX(30%); 
-	transform: translateX(30%) !important;
+	-webkit-transform: translateX(35vh); 
+	transform: translateX(35vh) !important;
     }
 
     form.move {
-	-webkit-transform: translateX(30%); 
-	transform: translateX(30%) !important;
+	-webkit-transform: translateX(38vh); 
+	transform: translateX(38vh) !important;
     }
     
 }
-
