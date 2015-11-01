@@ -22,9 +22,9 @@ block content
         div(class="row-fixed-bottom")
           p
             div(class="input-daterange input-group padded" id="datepicker")
-              input(type="date" ng-model="sDate" placeholder="mm/dd/yyyy" class="input-sm form-control" name="start")
+              input(type="text" id="fromDate" ng-model="sDate" placeholder="mm/dd/yyyy" class="input-sm form-control" name="start")
               span(class="input-group-addon") to
-              input(type="date" ng-model="eDate" placeholder="mm/dd/yyyy" class="input-sm form-control" name="end")
+              input(type="text" id="toDate" ng-model="eDate" placeholder="mm/dd/yyyy" class="input-sm form-control" name="end")
 
             input(type="text" placeholder="search for title" ng-model="searchText") 
 

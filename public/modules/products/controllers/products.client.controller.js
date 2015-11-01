@@ -2,6 +2,11 @@
     angular.module('Products')
 	.controller('productsCtrl', ['$scope','productService', '$state', function($scope, productService, $state){
 
+	    (function(){
+		angular.element("#fromDate" ).datepicker();
+		angular.element("#toDate" ).datepicker();
+	    }());
+
 	    productService.changedVariants = [];
 	    
 	    //getting the list of products
@@ -81,11 +86,12 @@
 		    }
 
 		    if(item[property] === null)return false;
+		    console.log(property, startDate, endDate);
 
-		    var iDate = moment(item[property]);
-		    var sDate = moment(startDate, "MM-DD-YYYY");
-		    var eDate = moment(endDate, "MM-DD-YYYY");
-
+		    var iDate = moment(item[property], "MM-DD-YYYY");
+		    var sDate = moment(new Date(startDate).toJSON(), "MM-DD-YYYY");
+		    var eDate = moment(new Date(endDate).toJSON(), "MM-DD-YYYY");
+		    console.log(iDate, sDate, eDate);
 		    if (iDate >= sDate && iDate <= eDate) return true ;
 		    return false;
 		};
