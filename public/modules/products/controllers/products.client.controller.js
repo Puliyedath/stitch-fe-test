@@ -18,6 +18,11 @@
 
 	    $scope.select = function(product){
 		$scope.product = product;
+
+		//if current state is not home
+		if(!$state.is('home')){
+		    $state.go('home');
+		}
 	    };
 
 	    $scope.edit = function(variant){
