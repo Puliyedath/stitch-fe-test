@@ -24,6 +24,21 @@ nav a{
     height: 100vh;
 }
 
+input.ng-invalid.ng-dirty{
+    border-color:red;
+}
+
+input.ng-valid.ng-dirty{
+    border-color:green;
+    border-width:2px;
+}
+
+.error-info{
+    font-style:italic;
+    color: red;
+}
+
+
 .col-sm-3{
     border-right: 1px solid black;
     overflow: auto;
