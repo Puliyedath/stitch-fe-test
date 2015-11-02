@@ -59,7 +59,9 @@
 	    };
 
 	    $scope.submit=function(product){
+		console.log('inside parent submit');
 		var data = {"product": product};
+
 
 		productService.save({
 		    method:'post',

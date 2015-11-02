@@ -21,16 +21,9 @@
 		    eDate = new Date(endDate).toJSON().slice(0,10);
 
 
-		console.log(iDate >= sDate);
-		console.log(iDate <= eDate);
-
-		console.log('----');
-
 		if ((iDate >= sDate) && (iDate <= eDate)) return true ;
 		return false;
 	    });
-
-	    console.log(output);
 
 	    return output;
 	    

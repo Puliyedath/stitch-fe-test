@@ -4,13 +4,15 @@
 	.directive('addProduct', function(){
 	    return {
 		restrict: 'E',
+		replace: true,
 		templateUrl:'/modules/Products/views/add-product.client.view.html',
 		scope:{
-		    onProdSubmit: '&'
+		    'onSubmit': "&"
 		},
-		controller:function(scope){
-		    scope.submit = function(newProduct){
-			scope.onProdSubmit({newProduct: newProduct});
+		link:function($scope){
+		    $scope.submit = function(newProduct){
+			console.log('in here');
+			$scope.onSubmit({product: newProduct});
 		    };
 		}
 
