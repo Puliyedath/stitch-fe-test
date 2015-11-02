@@ -3,7 +3,7 @@
     angular.module('Products').config(['$stateProvider', function($stateProvider){
 	$stateProvider.state('addProduct',{
 	    url:'/products/create',
-	    templateUrl: 'modules/products/views/add-product.client.view.html'
+	    templateUrl: '/modules/products/views/product-add.client.view.html'
 	});
     }]);
 }());
