@@ -11,7 +11,6 @@
 		},
 		link:function($scope){
 		    $scope.submit = function(newProduct){
-			console.log('in here');
 			$scope.onSubmit({product: newProduct});
 		    };
 		}
