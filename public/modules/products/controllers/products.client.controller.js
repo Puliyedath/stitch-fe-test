@@ -94,7 +94,6 @@
 			    $scope.products.splice(i,1);
 			}
 			$scope.product=$scope.products[0];
-			$state.go('home');
 		    }
 		    $state.go('home');
 		}, function(error){
